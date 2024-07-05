@@ -8,11 +8,14 @@ function MainHeader() {
     <div>
       <AppBar position="static" style={{ backgroundColor: "#002532" }}>
         <Toolbar>
-          <img src={logo} alt="Logo" style={{ width: "100px", height: "auto", marginRight: "20px" }} />
-          <Typography variant="h6" component="div" style={{ flexGrow: 1 }}>
+          <img
+            src={logo}
+            alt="Logo"
+            style={{ width: "100px", height: "auto", marginRight: "20px" }}
+          />
+          <Typography variant="h6" component="div" style={{ flexGrow: 1, color:"white"}}>
             Rice Mill Management System
           </Typography>
-          
         </Toolbar>
       </AppBar>
     </div>

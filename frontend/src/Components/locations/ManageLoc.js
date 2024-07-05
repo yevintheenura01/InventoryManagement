@@ -4,7 +4,6 @@ import axios from "axios";
 import {
   Button,
   Typography,
-  Grid,
   Table,
   TableContainer,
   TableHead,
@@ -18,7 +17,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 
 import Head from "../Header/Header";
-import LocIMG from "./location-01.jpg";
+import bg from "../bg.jpg";
 
 const URL = "http://localhost:5000/location";
 
@@ -44,16 +43,21 @@ function ManageLoc() {
   };
 
   return (
-    <div>
+    <div
+      style={{
+        backgroundImage: `url(${bg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        minHeight: "100vh",
+        padding: "20px",
+      }}
+    >
       <Head />
-      <Typography variant="h3" gutterBottom>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+      <Typography variant="h3" gutterBottom style={{}}>
         Manage Location
       </Typography>
-      <Grid container spacing={2}>
-        <Grid item xs={12} md={6}>
-          <img src={LocIMG} alt="location map" style={{ maxWidth: "70%", height: "auto", marginLeft: "1em" }} />
-        </Grid>
-      </Grid>
+      </div>
       <br />
       <Link to="/addLocation">
         <Button variant="contained" color="primary" style={{ width: "13em", height: "2em", fontSize: "15px", marginLeft: "1em" }}>
