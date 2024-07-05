@@ -24,7 +24,6 @@ import ListItemText from "@mui/material/ListItemText";
 import DashboardRoundedIcon from "@mui/icons-material/DashboardRounded";
 import Inventory2RoundedIcon from "@mui/icons-material/Inventory2Rounded";
 import WarehouseRoundedIcon from "@mui/icons-material/WarehouseRounded";
-import LocalShippingRoundedIcon from "@mui/icons-material/LocalShippingRounded";
 import SummarizeRoundedIcon from "@mui/icons-material/SummarizeRounded";
 import IntegrationInstructionsRoundedIcon from "@mui/icons-material/IntegrationInstructionsRounded";
 
@@ -72,7 +71,7 @@ const DrawerHeader = styled("div")(({ theme }) => ({
   padding: theme.spacing(0, 1),
   // necessary for content to be below app bar
   ...theme.mixins.toolbar,
-  justifyContent: "flex-end",
+  justifyContent: "flex-end"
 }));
 
 const menuItems = [
@@ -98,9 +97,9 @@ function Header() {
   return (
     <div>
       <header>
-      <Box sx={{ backgroundColor: '#002432' }}>
+      <Box>
             <CssBaseline />
-            <AppBar position="fixed" open={open}>
+            <AppBar position="fixed" open={open} style={{ backgroundColor: "#002532" }}>
               <Toolbar>
                 <IconButton
                   color="inherit"
@@ -120,11 +119,11 @@ function Header() {
                   to="/dashboard"
                   style={{ textDecoration: "none", color: "inherit" }}
                 >
-                  <Link to="/">
+                  <Link to="/yevin">
                   <Button color="inherit" style={{color:"white"}}>Home</Button>
                   </Link>
                 </Link>
-                
+                <Link to="/">
                 <img
                   src={logo}
                   alt="Logo"
@@ -132,6 +131,7 @@ function Header() {
                   width={100}
                   style={{ marginRight: "10px" }}
                 />
+                </Link>
               </Toolbar>
             </AppBar>
             <Drawer

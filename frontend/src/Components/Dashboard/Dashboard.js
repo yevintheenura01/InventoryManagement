@@ -208,7 +208,7 @@ function Dashboard() {
   return (
     <div>
       <Header />
-      <Grid container spacing={3} justifyContent="center" alignItems="center">
+      <Grid container spacing={2} justifyContent="left" alignItems="left">
         <Grid item xs={12} sm={6}>
           <Paper elevation={3} style={{ padding: 20 }}>
             <Typography variant="h4" gutterBottom>
@@ -229,7 +229,7 @@ function Dashboard() {
           </Paper>
         </Grid>
         <Grid item xs={12} sm={6}>
-          <Paper elevation={3} style={{ padding: 20 }}>
+          <Paper elevation={3} style={{ padding: 20}}>
             <Typography variant="h6" gutterBottom>
               Paddy Weight Overview
             </Typography>
