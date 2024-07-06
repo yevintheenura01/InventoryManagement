@@ -150,6 +150,8 @@ import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } fro
 import Header from '../Header/Header';
 import RefreshIcon from '@mui/icons-material/Refresh';
 
+import config from "../config";
+
 function Dashboard() {
   const [totalCount, setTotalCount] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
@@ -161,19 +163,19 @@ function Dashboard() {
     try {
       setLoading(true);
       // Fetch total count
-      const countResponse = await axios.get('http://localhost:5000/varieties');
+      const countResponse = await axios.get(`${config.backendUrl}/varieties`);
       setTotalCount(countResponse.data.totalCount);
 
       // Fetch total price
-      const priceResponse = await axios.get('http://localhost:5000/paddy/totalPrice');
+      const priceResponse = await axios.get(`${config.backendUrl}/paddy/totalPrice`);
       setTotalPrice(priceResponse.data.totalPrice);
 
       // Fetch total weight
-      const weightResponse = await axios.get('http://localhost:5000/paddy/totalWeight');
+      const weightResponse = await axios.get(`${config.backendUrl}/paddy/totalWeight`);
       setTotalWeight(weightResponse.data.totalWeight);
 
       // Fetch paddy data for the chart
-      const paddyResponse = await axios.get('http://localhost:5000/paddy');
+      const paddyResponse = await axios.get(`${config.backendUrl}/paddy`);
       setPaddyData(transformData(paddyResponse.data.paddy));
     } catch (error) {
       console.error('Error fetching data:', error);

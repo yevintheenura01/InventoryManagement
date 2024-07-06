@@ -35,7 +35,7 @@ app.use("/api",InstructionRoute);
 
 mongoose
   .connect(
-    "mongodb+srv://yevin:fsJOGWSDQ18jlrVg@cluster0.6bn7jxc.mongodb.net/"
+    "mongodb+srv://yevin:fsJOGWSDQ18jlrVg@cluster0.6bn7jxc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
   )
   .then(() => console.log("Connected to MongoDB"))
   .then(() => {
