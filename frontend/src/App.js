@@ -1,5 +1,4 @@
 import React from "react";
-import { useEffect, useState } from "react"
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Main from "./Components/main/Main";
@@ -29,14 +28,6 @@ import Wdamages from "./Components/Workers/damages/Damages";
 import HomeYevin from "./Components/Dashboard/Dashboard";
 
 function App() {
-  const [message, setMessage] = useState("");
-
-  // Fetching message from backend on mount
-  useEffect(() => {
-    fetch("http://localhost:4000")
-      .then((res) => res.json())
-      .then((data) => setMessage(data.message));
-  }, []);
   
   return (
     
