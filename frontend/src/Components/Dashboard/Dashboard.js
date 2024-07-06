@@ -186,7 +186,7 @@ function Dashboard() {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  });
 
   // Function to transform paddy data into chart-compatible format
   const transformData = (paddyData) => {
