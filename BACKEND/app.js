@@ -16,7 +16,7 @@ const cors = require("cors");
 
 app.use(cors(
   {
-    origin: ["https://inventory-management-66h1gpj33-yevintheenura01s-projects.vercel.app"],
+    origin: [""],
     methods: ["POST", "GET"],
     credentials: true,
 
