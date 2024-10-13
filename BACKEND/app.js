@@ -1,4 +1,4 @@
-//pswrd= fsJOGWSDQ18jlrVg
+//pswrd= 3w5q2G9vTILoGuVd
 
 const express = require("express");
 const mongoose = require("mongoose");
@@ -27,7 +27,7 @@ app.use("/api",InstructionRoute);
 
 mongoose
   .connect(
-    "mongodb+srv://yevin:fsJOGWSDQ18jlrVg@cluster0.6bn7jxc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+    "mongodb+srv://inventoryManager:3w5q2G9vTILoGuVd@web.6v9sxwv.mongodb.net/"
   )
   .then(() => console.log("Connected to MongoDB"))
   .then(() => {
