@@ -1,4 +1,4 @@
-//pswrd= fsJOGWSDQ18jlrVg
+//pswrd= 3w5q2G9vTILoGuVd
 
 const express = require("express");
 const mongoose = require("mongoose");
@@ -12,16 +12,11 @@ const InstructionRoute = require("./Routes/InstructionRoute");
 
 const app = express();
 const cors = require("cors");
-require("dotenv").config();
 //app.use(bodyParser.json()); // Parse JSON bodies
-
-const corsOptions = {
-  origin: "http://localhost:3000" // frontend URI (ReactJS)
-}
 
 //middleware
 app.use(express.json());
-app.use(cors(corsOptions));
+app.use(cors());
 app.use("/varieties", Vroute);
 app.use("/paddy", Proute);
 app.use("/rice", Rroute);
@@ -32,11 +27,10 @@ app.use("/api",InstructionRoute);
 
 mongoose
   .connect(
-    process.env.MONGODB_URI
+    "mongodb+srv://inventoryManager:3w5q2G9vTILoGuVd@web.6v9sxwv.mongodb.net/"
   )
   .then(() => console.log("Connected to MongoDB"))
   .then(() => {
-    const PORT = process.env.PORT || 8000
-    app.listen(PORT);
+    app.listen(5000);
   })
   .catch((err) => console.log);
