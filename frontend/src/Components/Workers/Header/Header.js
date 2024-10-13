@@ -22,7 +22,7 @@ function Header() {
               <Toolbar>
 
                 
-                
+              <Link to="/">
                 <img
                   src={logo}
                   alt="Logo"
@@ -30,6 +30,7 @@ function Header() {
                   width={100}
                   style={{ marginRight: "10px" }}
                 />
+                </Link>
                 <Link to="/wHome">
                   <Button color="inherit" style={{margin:"0 0 0 90em",color:"white"}}>Home</Button>
                 </Link>
